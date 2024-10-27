@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 body {
-    @apply bg-neutral-900;
-    @apply text-red-100;
+  background-image: url('./assets/bg-castle.jpg');
+  background-size: cover;
+  @font-face {
+    font-family: arcade;
+    src: url('./assets/fonts/arcde-font.TTF');
+  }
+  font: "arcade";
+  @apply bg-neutral-900;
+  @apply text-red-100;
 }
