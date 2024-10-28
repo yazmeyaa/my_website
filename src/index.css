@@ -2,14 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+}
+
+@font-face {
+  font-family: 'arcade';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('@/assets/joystix_monospace.otf') format('opentype');
+}
+
 body {
   background-image: url('./assets/bg-castle.jpg');
   background-size: cover;
-  @font-face {
-    font-family: arcade;
-    src: url('./assets/fonts/arcde-font.TTF');
-  }
-  font: "arcade";
+  font-family: arcade;
   @apply bg-neutral-900;
   @apply text-red-100;
 }

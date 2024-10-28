@@ -12,8 +12,14 @@ onMounted(() => {
 <template>
   <div>
     <h1>Projects</h1>
-    <div class="grid grid-cols-3 gap-6 mx-8 my-4">
+    <div class="grid
+    max-w-6xl
+    mx-auto
+    grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3
+    gap-6 my-4">
       <div v-for="item in projects.projects" :key="item.id" class="flex flex-col
+        w-full
+        box-border
         py-6 px-6
         bg-neutral-800
         border-neutral-700
