@@ -5,22 +5,22 @@ type StackItem = {
 }
 
 const stack: StackItem[] = [
-  { title: "TypeScript", href: "https://www.typescriptlang.org/" },
-  { title: "NodeJS", href: "https://nodejs.org/en" },
-  { title: "Go", href: "https://go.dev/" },
-  { title: "React", href: "https://react.dev/" },
-  { title: "Next.JS", href: "https://nextjs.org/" },
-  { title: "Svelte", href: "https://svelte.dev/" },
-  { title: "SvelteKit", href: "https://svelte.dev/docs/kit/introduction" },
-  { title: "Vue", href: "https://vuejs.org/" },
-  { title: "PixiJS", href: "https://pixijs.com/" },
-  { title: "Three.JS", href: "https://threejs.org/" },
-  { title: "WebGL", href: "https://ru.wikipedia.org/wiki/WebGL" },
-  { title: "Tailwind", href: "https://tailwindcss.com/" },
-  { title: "Express", href: "https://expressjs.com/" },
-  { title: "SQL", href: "https://ru.wikipedia.org/wiki/SQL/" },
-  { title: "PostgreSQL", href: "https://www.postgresql.org/" },
-  { title: "SQLite", href: "https://www.sqlite.org/" },
+  { title: 'TypeScript', href: 'https://www.typescriptlang.org/' },
+  { title: 'NodeJS', href: 'https://nodejs.org/en' },
+  { title: 'Go', href: 'https://go.dev/' },
+  { title: 'React', href: 'https://react.dev/' },
+  { title: 'Next.JS', href: 'https://nextjs.org/' },
+  { title: 'Svelte', href: 'https://svelte.dev/' },
+  { title: 'SvelteKit', href: 'https://svelte.dev/docs/kit/introduction' },
+  { title: 'Vue', href: 'https://vuejs.org/' },
+  { title: 'PixiJS', href: 'https://pixijs.com/' },
+  { title: 'Three.JS', href: 'https://threejs.org/' },
+  { title: 'WebGL', href: 'https://ru.wikipedia.org/wiki/WebGL' },
+  { title: 'Tailwind', href: 'https://tailwindcss.com/' },
+  { title: 'Express', href: 'https://expressjs.com/' },
+  { title: 'SQL', href: 'https://ru.wikipedia.org/wiki/SQL/' },
+  { title: 'PostgreSQL', href: 'https://www.postgresql.org/' },
+  { title: 'SQLite', href: 'https://www.sqlite.org/' }
 ]
 </script>
 
@@ -40,18 +40,31 @@ const stack: StackItem[] = [
           <span class="text-xl">Here is my stack:</span>
           <ul class="my-2 flex gap-2 flex-wrap border-2 border-neutral-900 p-2 rounded-md bg-neutral-800">
             <li v-for="item in stack"
-              class="p-1 bg-lime-900 rounded-md hover:bg-lime-800 transition-all hover:scale-105">
-              <a :href="item.href" :title="item.title" target="_blank">
+                class="bg-lime-900 rounded-md hover:bg-lime-800 transition-all hover:scale-105">
+              <a :href="item.href" :title="item.title" target="_blank" class="block h-full w-full m-1">
                 <span>{{ item.title }}</span>
               </a>
             </li>
           </ul>
           <p>
-            Visit my <RouterLink to="/projects"
-              class="underline font-bold hover:text-orange-300 transition-colors text-orange-200">Projects page
-            </RouterLink> to explore completed projects, or check out my <a
-              class="underline font-bold hover:text-orange-300 transition-colors text-orange-200"
-              href="https://github.com/yazmeyaa" target="_blank">Github</a> to see what I’m currently working on.
+            Visit my
+<!--            <RouterLink-->
+<!--              aria-disabled="true"-->
+<!--              aria-description="Not available now."-->
+<!--              to="/projects"-->
+<!--              class="underline font-bold hover:text-orange-300 transition-colors text-orange-200">-->
+<!--              Projects page-->
+<!--            </RouterLink>-->
+            <RouterLink
+              aria-disabled="true"
+              aria-description="Not available now."
+              to="/projects"
+              class="underline font-bold hover:text-orange-300 transition-colors cursor-default pointer-events-none select-none text-gray-400">
+              Projects page (NOT AVAILABLE NOW)
+            </RouterLink>
+            to explore completed projects, or check out my <a
+            class="underline font-bold hover:text-orange-300 transition-colors text-orange-200"
+            href="https://github.com/yazmeyaa" target="_blank">Github</a> to see what I’m currently working on.
           </p>
 
         </main>
@@ -60,11 +73,11 @@ const stack: StackItem[] = [
           <h2 class="text-center">Contacts:</h2>
           <div class="flex gap-5 p-2 justify-center">
             <a href="https://t.me/future_undefined" title="Telegram contact"
-              class="underline font-bold hover:text-orange-300 transition-colors text-orange-200">
+               class="underline font-bold hover:text-orange-300 transition-colors text-orange-200">
               <span>Telegram</span>
             </a>
             <a href="https://github.com/yazmeyaa" title="Github account"
-              class="underline font-bold hover:text-orange-300 transition-colors text-orange-200">github</a>
+               class="underline font-bold hover:text-orange-300 transition-colors text-orange-200">github</a>
           </div>
         </footer>
       </section>
